@@ -49,9 +49,9 @@ README.md → Project documentation
 - Automated compilation using batch file
 
 ## Conclusion
-  > SJF algorithm usually gives minimum waiting time.
-  > Round Robin ensures fair CPU allocation among processes.
-  > FCFS is simple but may lead to larger waiting times.
+  > - SJF algorithm usually gives minimum waiting time.
+  > - Round Robin ensures fair CPU allocation among processes.
+  > - FCFS is simple but may lead to larger waiting times.
 
 
 This project helps understand how operating systems manage CPU scheduling efficiently.
