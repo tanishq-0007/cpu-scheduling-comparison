@@ -1,12 +1,11 @@
-#include<stdio.h>
+#include <stdio.h>
 #include "scheduler.h"
 
-int main()
-{
-    int n;
-    
+int main() {
+    int n, quantum;
+
     printf("Enter number of processes: ");
-    scanf("%d",&n);
+    scanf("%d", &n);
 
     int at[n], bt[n];
 
@@ -18,32 +17,53 @@ int main()
     for(int i=0;i<n;i++)
         scanf("%d",&bt[i]);
 
-    int quantum;
     printf("Enter time quantum for Round Robin: ");
     scanf("%d",&quantum);
 
-    float fcfs_avg, sjf_avg, rr_avg;
+    printf("\nProcess Table\n");
+    printf("Process\tArrival\tBurst\n");
 
-    fcfs(n,at,bt,&fcfs_avg);
+    for(int i=0;i<n;i++){
+        printf("P%d\t%d\t%d\n", i+1, at[i], bt[i]);
+    }
 
-    sjf(n,at,bt,&sjf_avg);
+    float avg_wt_fcfs, avg_wt_sjf, avg_wt_rr;
+    float avg_tat_fcfs, avg_tat_sjf, avg_tat_rr;
 
-    roundRobin(n,at,bt,quantum,&rr_avg);
+    printf("\n--- FCFS ---\n");
+    fcfs(n, at, bt, &avg_wt_fcfs, &avg_tat_fcfs);
+
+    printf("\n--- SJF ---\n");
+    sjf(n, at, bt, &avg_wt_sjf, &avg_tat_sjf);
+
+    printf("\n--- Round Robin ---\n");
+    roundRobin(n, at, bt, quantum, &avg_wt_rr, &avg_tat_rr);
 
     printf("\n---- Comparison ----\n");
 
-    printf("FCFS Avg Waiting Time = %.2f\n",fcfs_avg);
-    printf("SJF Avg Waiting Time = %.2f\n",sjf_avg);
-    printf("RR Avg Waiting Time = %.2f\n",rr_avg);
+    printf("FCFS Avg Waiting Time = %.2f\n", avg_wt_fcfs);
+    printf("FCFS Avg Turnaround Time = %.2f\n\n", avg_tat_fcfs);
 
-    if(fcfs_avg < sjf_avg && fcfs_avg < rr_avg)
-        printf("Best Algorithm: FCFS\n");
+    printf("SJF Avg Waiting Time = %.2f\n", avg_wt_sjf);
+    printf("SJF Avg Turnaround Time = %.2f\n\n", avg_tat_sjf);
 
-    else if(sjf_avg < rr_avg)
-        printf("Best Algorithm: SJF\n");
+    printf("RR Avg Waiting Time = %.2f\n", avg_wt_rr);
+    printf("RR Avg Turnaround Time = %.2f\n\n", avg_tat_rr);
 
-    else
-        printf("Best Algorithm: Round Robin\n");
+    float best = avg_wt_fcfs;
+    char algo[20] = "FCFS";
+
+    if(avg_wt_sjf < best){
+        best = avg_wt_sjf;
+        sprintf(algo,"SJF");
+    }
+
+    if(avg_wt_rr < best){
+        best = avg_wt_rr;
+        sprintf(algo,"Round Robin");
+    }
+
+    printf("Best Algorithm: %s\n", algo);
 
     return 0;
 }
