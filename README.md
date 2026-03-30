@@ -1,4 +1,4 @@
-# Comparative Analysis of CPU Scheduling Algorithms
+# CPU Scheduling Algorithm Simulator and Performance Comparator
 
 ## Objective
 To compare different CPU scheduling algorithms and determine the most efficient algorithm based on waiting time.
@@ -48,10 +48,19 @@ README.md → Project documentation
 - Modular programming approach
 - Automated compilation using batch file
 
+## Skills Demonstrated
+- C Programming
+- Data Structures (Arrays)
+- Algorithm Analysis
+- Operating System Concepts
+- Modular Programming
+- GitHub Version Control
+- Basic Automation (Batch Script)
+
 ## Conclusion
-  > - SJF algorithm usually gives minimum waiting time.
-  > - Round Robin ensures fair CPU allocation among processes.
-  > - FCFS is simple but may lead to larger waiting times.
+- SJF algorithm usually gives minimum waiting time.
+- Round Robin ensures fair CPU allocation among processes.
+- FCFS is simple but may lead to larger waiting times.
 
 
 This project helps understand how operating systems manage CPU scheduling efficiently.
