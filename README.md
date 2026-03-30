@@ -34,8 +34,24 @@ fcfs.c → implements FCFS scheduling
 sjf.c → implements SJF scheduling  
 round_robin.c → implements Round Robin scheduling  
 scheduler.h → function declarations  
-Makefile → compiles project  
+build.bat → Windows compilation automation
+HOW_TO_RUN.txt → Execution instructions
+README.md → Project documentation
+
+## Features
+- Accepts user input for processes
+- Displays Gantt Chart
+- Calculates Waiting Time
+- Calculates Average Waiting Time
+- Compares performance of algorithms
+- Identifies best scheduling algorithm automatically
+- Modular programming approach
+- Automated compilation using batch file
 
 ## Conclusion
-SJF algorithm usually gives minimum waiting time.
-Round Robin ensures fair CPU allocation among processes.
+  > SJF algorithm usually gives minimum waiting time.
+  > Round Robin ensures fair CPU allocation among processes.
+  > FCFS is simple but may lead to larger waiting times.
+
+
+This project helps understand how operating systems manage CPU scheduling efficiently.
