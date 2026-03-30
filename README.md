@@ -22,6 +22,9 @@ Program displays:
 - Average Waiting Time
 - Best Algorithm
 
+## Sample Output
+![Output](output.png)
+
 ## Technologies Used
 - C Programming Language
 - Linux Concepts
@@ -61,6 +64,5 @@ README.md → Project documentation
 - SJF algorithm usually gives minimum waiting time.
 - Round Robin ensures fair CPU allocation among processes.
 - FCFS is simple but may lead to larger waiting times.
-
 
 This project helps understand how operating systems manage CPU scheduling efficiently.
