@@ -1,3 +1,5 @@
+Developed as Operating System mini project (2nd Year)
+
 CPU SCHEDULING PROJECT – EXECUTION GUIDE
 
 Project Title:
