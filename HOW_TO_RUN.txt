@@ -1,0 +1,118 @@
+CPU SCHEDULING PROJECT – EXECUTION GUIDE
+
+Project Title:
+Comparative Analysis of CPU Scheduling Algorithms
+
+----------------------------------------
+SYSTEM REQUIREMENTS
+----------------------------------------
+1. Windows OS
+2. GCC Compiler installed (MinGW recommended)
+3. Command Prompt or VS Code terminal
+
+----------------------------------------
+PROJECT FILES
+----------------------------------------
+main.c
+fcfs.c
+sjf.c
+round_robin.c
+scheduler.h
+Makefile
+build.bat
+README.md
+HOW_TO_RUN.txt
+
+----------------------------------------
+METHOD 1 (EASIEST) – USING build.bat
+----------------------------------------
+Step 1:
+Locate project folder.
+
+Step 2:
+Double click file:
+build.bat
+
+Step 3:
+Program will compile automatically.
+
+Step 4:
+Enter required input.
+
+Step 5:
+Output will be displayed on screen.
+
+----------------------------------------
+METHOD 2 – USING TERMINAL
+----------------------------------------
+Step 1:
+Open project folder.
+
+Step 2:
+Open terminal or command prompt in that folder.
+
+Step 3:
+Compile the program using command:
+
+gcc main.c fcfs.c sjf.c round_robin.c -o scheduler
+
+Step 4:
+Run program:
+
+scheduler.exe
+
+----------------------------------------
+INPUT FORMAT
+----------------------------------------
+Enter number of processes
+
+Enter arrival times (space separated)
+
+Enter burst times (space separated)
+
+Enter time quantum (for Round Robin)
+
+----------------------------------------
+EXAMPLE INPUT
+----------------------------------------
+Enter number of processes: 3
+
+Enter arrival times:
+0 1 2
+
+Enter burst times:
+5 3 8
+
+Enter time quantum for Round Robin:
+2
+
+----------------------------------------
+OUTPUT
+----------------------------------------
+Program displays:
+
+Gantt Chart for:
+1. First Come First Serve (FCFS)
+2. Shortest Job First (SJF)
+3. Round Robin (RR)
+
+Also displays:
+Average Waiting Time
+Best Scheduling Algorithm
+
+----------------------------------------
+NOTES
+----------------------------------------
+If gcc command not recognized,
+install MinGW compiler.
+
+Ensure all project files are in same folder.
+
+Do not rename source files.
+
+----------------------------------------
+LEARNING PURPOSE
+----------------------------------------
+This project demonstrates practical
+implementation of CPU Scheduling
+algorithms used in Operating Systems.
